@@ -1,19 +1,15 @@
 # AnomalyDetection_ACE
-.
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
+## Directory Structure
+####ace
+    -Data
+        -HEP
+           -hep.hdf5(preprocessed dataset for learning)
+        -shuttlelog
+           -rand
+              -three randomly sampled dataset downsized 
+               from uci public library
+    -ACE_v3.py
+    -KNN.py
+    -LOF.py
+
+

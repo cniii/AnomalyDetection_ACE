@@ -4,12 +4,11 @@ import matplotlib.pyplot as plt
 import h5py
 import time
 from sklearn.neighbors import NearestNeighbors
-from preprocess_shuttle import preprocess_shuttle
 
 # import data
-print('importing data files...')
-data = preprocess_shuttle()
-print('finish importing data!')
+filepath = 'data/shuttlelog/rand/shuttle_1.hdf5'
+f = h5py.File(filepath, 'r')
+data = f['shuttle']
 
 trainX = data[:, :-1]
 trainY = data[:, -1]
