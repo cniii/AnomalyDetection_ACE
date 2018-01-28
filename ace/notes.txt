@@ -1,0 +1,13 @@
+                            ===================
+                            |     Notes       |
+                            ===================      
+-------Link to Google Drive Doc--------
+https://docs.google.com/document/d/1u0uBlQmTpx0WzYKf87ExBQMD-qndnRsnMgFLuleuAek/edit
+---------------------------------------
+
+- Meeting: Jan.29
+    To-do:
+    1. 3 random sample and rerun ACE, LOF                    (+)
+    2. prepare HEP data                                      (+)
+    3. run HEP over ACE, LOF                                 ( )
+    4. update doc

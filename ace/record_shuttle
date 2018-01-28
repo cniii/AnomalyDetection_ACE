@@ -1,0 +1,76 @@
+------------k=5--------------
+reported 3587
+correct 1146
+miss 733
+
+reported 3587
+correct 167
+miss 712
+
+reported 3587
+correct 148
+miss 731
+
+------------k=10--------------
+reported 3587
+correct 243
+miss 636
+LOF: 5.261200904846191
+
+reported 3587
+correct 189
+miss 690
+LOF: 5.110514879226685
+
+reported 3587
+correct 198
+miss 681
+LOF: 5.341112852096558
+
+======ACE========
+[downsize: 1000]
+max collision 958.0
+reported normal:  576
+correctly reported normal:  569
+reported outliers:  424
+correctly reported outliers:  21
+
+[whole set:
+    total: 35866
+    number of normals: 34987
+    number of outliers: 879
+]
+importing data files...
+finish importing data!
+random sampling...
+finish data preprocessing!
+setting up ACE estimator...
+max collision 33948.0
+setup finished!
+estimating...
+finshed estimating!
+analyzing results...
+finished collecting results!
+reported normal:  22421
+correctly reported normal:  22212
+reported outliers:  13445
+correctly reported outliers:  670
+[Finished in 420.8s]
+
+---------k=15----------
+importing data files...
+finish importing data!
+random sampling...
+finish data preprocessing!
+setting up ACE estimator...
+max collision 32843.0
+setup finished!
+estimating...
+finshed estimating!
+analyzing results...
+finished collecting results!
+reported normal:  19804
+correctly reported normal:  19607
+reported outliers:  16062
+correctly reported outliers:  682
+[Finished in 403.4s]

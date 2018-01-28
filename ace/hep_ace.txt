@@ -1,0 +1,33 @@
+K= 15
+L= 50
+alpha= 1
+max collision 24909.0
+ACE Runtime: 262.81479120254517
+reported normal:  17340
+correctly reported normal:  15420
+reported outliers:  13824
+correctly reported outliers:  1550
+=====END=======
+
+K= 15
+L= 50
+alpha= 15
+max collision 26494.0
+ACE Runtime: 251.71499705314636
+reported normal:  18334
+correctly reported normal:  16284
+reported outliers:  12830
+correctly reported outliers:  1420
+=====END=======
+
+K= 15
+L= 50
+alpha= 50
+max collision 29516.0
+ACE Runtime: 279.3223259449005
+reported normal:  17177
+correctly reported normal:  15280
+reported outliers:  13987
+correctly reported outliers:  1573
+=====END=======
+

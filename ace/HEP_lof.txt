@@ -1,0 +1,26 @@
+=============LOF================
+N =  5
+norm:  27694
+outliers:  3470
+31164
+reported 3117
+correct 333
+miss 3137
+LOF: 0.9087510108947754
+N =  10
+norm:  27694
+outliers:  3470
+31164
+reported 3117
+correct 339
+miss 3131
+LOF: 17.86380386352539
+N =  50
+norm:  27694
+outliers:  3470
+31164
+reported 3117
+correct 316
+miss 3154
+LOF: 36.42691612243652
+[Finished in 57.1s]

@@ -1,0 +1,18 @@
+keys for the h5 file
+['features', 'fileidx', 'imass', 'targets', 'tmass', 'weights']
+- class 0
+    features: (27694, 11)
+    fileidx: (27694,) values: 0, 1, 2, 3, 5
+    imass: (27694,)
+    targets: (27694,) class label: all 0s for class 0
+    tmass: (27694,): all 100
+    weights: (27694,)
+
+- class 1
+    features: (3470, 11)
+    fileidx: (3470,) values: all 5
+    imass: (3470,)
+    targets: (3470,) class label: all 1s for class 1
+    tmass: (3470,): all 100
+    weights: (3470,): same weights
+    

@@ -1,0 +1,52 @@
+===================ACE==================
+K= 15
+L= 50
+alpha= 1
+max collision 32006.0
+ACE Runtime: 304.4009130001068
+reported normal:  19078
+correctly reported normal:  18884
+reported outliers:  16788
+correctly reported outliers:  685
+=====END=======
+
+K= 15
+L= 50
+alpha= 15
+max collision 30678.0
+ACE Runtime: 310.1881351470947
+reported normal:  20574
+correctly reported normal:  20371
+reported outliers:  15292
+correctly reported outliers:  676
+=====END=======
+
+K= 15
+L= 50
+alpha= 50
+max collision 31958.0
+ACE Runtime: 296.0386748313904
+reported normal:  20759
+correctly reported normal:  20575
+reported outliers:  15107
+correctly reported outliers:  695
+=====END=======
+
+====================LOF========================
+N =  5
+norm:  34987
+outliers:  879
+35866
+reported 3587
+correct 153
+miss 726
+LOF: 3.6852002143859863
+N =  10
+norm:  34987
+outliers:  879
+35866
+reported 3587
+correct 175
+miss 704
+LOF: 8.382307052612305
+[Finished in 11.7s]
