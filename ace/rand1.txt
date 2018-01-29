@@ -41,6 +41,8 @@ reported 3587
 correct 183
 miss 696
 LOF: 4.020866870880127
+
+
 N =  10
 norm:  34987
 outliers:  879
