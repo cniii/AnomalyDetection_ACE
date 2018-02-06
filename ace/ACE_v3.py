@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import h5py
 import math
 import time
+import pandas as pd
 from sklearn.preprocessing.data import StandardScaler
+from sklearn.preprocessing.data import MinMaxScaler
 
 # [delete]prepare random sample once and use it through out all test for consistency
 # data = preprocess_shuttle()
@@ -21,7 +23,7 @@ from sklearn.preprocessing.data import StandardScaler
 
 # -----------HEP------------
 # import data - HEP
-filepath = 'data/HEP_Daniel/hep.hdf5'
+filepath = 'data/HEP/hep.hdf5'
 f = h5py.File(filepath, 'r')
 trainX = f['features']
 trainY = f['targets']
@@ -93,8 +95,11 @@ class ACE:
 
 K = 15
 L = 50
-al = [1, 15, 50]
+alpha = 5
+#al = [1, 15, 50]
 
+# ===========test 3 random samples===========
+"""
 for k in range(3):
     alpha = al[k]
 
@@ -140,6 +145,7 @@ for k in range(3):
     print("=====END=======")
     print()
 
+"""
 
 # print('Calculating Learning Results...')
 # data = b_dat
@@ -230,3 +236,50 @@ for k in range(3):
 # # plt.plot(xs, np.asarray(mus) - np.asarray(outls), label = 'outlier deviation from mean')
 # # plt.plot(xs, np.asarray(mus) - np.asarray(norms), label = 'inner point deviation from mean')
 # # plt.legend(loc='best')
+
+"""
+K = 15
+L = 50
+alpha = 5
+print('estimating')
+est = ACE(trainX, K, L, alpha)
+outliers = trainY
+print('querying outliers')
+#outresmean = np.mean([est.query(val)[0] for val in outliers])
+outres = np.array([est.query(val)[0] for val in outliers])
+
+print('querying normal data')
+normres = np.array([est.query(val)[0] for val in trainX])
+alphadict = {}
+alphadict['corrout'] = []
+alphadict['errout'] = []
+alphadict['corrnorm'] = []
+alphadict['errnorm'] = []
+
+alphas = np.linspace(0, 100, 20)
+print('alphas len', len(alphas))
+for alpha in alphas:
+    print(alpha)
+    corrout = outres[abs(outres - est.mu) < alpha]
+    errout = outres[abs(outres - est.mu) >= alpha]
+    corrnorm = normres[abs(normres - est.mu) >= alpha]
+    errnorm = normres[abs(normres - est.mu) < alpha]
+    alphadict['corrout'].append(len(corrout) / len(outliers))
+    alphadict['errout'].append(len(errout) / len(outliers))
+    alphadict['corrnorm'].append(len(corrnorm) / len(data))
+    alphadict['errnorm'].append(len(errnorm) / len(data))
+    print(alphadict['corrout'])
+    print(alphadict['errout'])
+    print(alphadict['corrnorm'])
+    print(alphadict['errnorm'])
+
+
+plt.clf()
+plt.plot(alphas, alphadict['corrout'], label='True positive rate')
+plt.plot(alphas, alphadict['errout'], label='False negative rate')
+plt.plot(alphas, alphadict['corrnorm'], label='True negative rate')
+plt.plot(alphas, alphadict['errnorm'], label='False positive rate')
+plt.title('Results, adv, K = 15, L = 50')
+plt.xlabel('$alpha$')
+plt.legend(loc='best')
+"""
